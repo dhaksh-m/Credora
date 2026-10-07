@@ -1,0 +1,2 @@
+// Placeholder — replace with professional 256x256 .ico (C + certificate + check, §124).
+// Generate via: https://www.icoconverter.com/ or `npx png-to-ico assets/icons/icon.png`

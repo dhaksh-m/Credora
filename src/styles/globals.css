@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; }
+body { @apply bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100; font-family: Inter, system-ui, sans-serif; }
+:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; }

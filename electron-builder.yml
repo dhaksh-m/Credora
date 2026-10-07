@@ -1,0 +1,38 @@
+appId: com.credora.desktop
+productName: Credora
+copyright: Copyright © 2026 Credora
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**
+  - out/**
+  - package.json
+
+extraResources:
+  - assets/fonts/**
+  - assets/templates/**
+
+win:
+  target:
+    - nsis
+    - portable
+  # TODO(§124): add professional icon at build/icon.ico (C + certificate + check)
+  artifactName: Credora-Setup-${version}.${ext}
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Credora
+
+portable:
+  artifactName: Credora-Portable-${version}.${ext}
+
+protocols:
+  - name: Credora Protocol
+    schemes:
+      - credora

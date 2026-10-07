@@ -1,0 +1,33 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.credora.desktop
+productName: Credora
+copyright: Copyright © 2026 Credora
+files:
+  - filter:
+      - dist/**
+      - out/**
+      - package.json
+extraResources:
+  - filter:
+      - assets/fonts/**
+      - assets/templates/**
+win:
+  target:
+    - nsis
+    - portable
+  artifactName: Credora-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Credora
+portable:
+  artifactName: Credora-Portable-${version}.${ext}
+protocols:
+  - name: Credora Protocol
+    schemes:
+      - credora
+electronVersion: 33.4.11
